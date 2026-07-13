@@ -947,19 +947,19 @@ function PatternsSection() {
 
 function Footer() {
   return (
-    <footer style={{ background: OB.fgHigh, borderTop: `1px solid rgba(255,255,255,0.06)`, padding: "20px 24px" }}>
+    <footer style={{ background: OB.bgCard, borderTop: `1px solid ${OB.border}`, padding: "20px 24px" }}>
       <div style={{ maxWidth: "960px", margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "12px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "28px", height: "28px", background: OB.blue, borderRadius: OB.radius }}>
             <Terminal size={13} style={{ color: "#fff" }} />
           </div>
-          <span style={{ fontFamily: OB.font, fontSize: "13px", color: "rgba(255,255,255,0.5)" }}>
+          <span style={{ fontFamily: OB.font, fontSize: "13px", color: OB.fgMuted }}>
             Vibe Coding with Claude — Design System · Built on Oblique v11
           </span>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
           <ObBadge status="progress">claude-sonnet-4-6</ObBadge>
-          <span style={{ fontFamily: OB.mono, fontSize: "11px", color: "rgba(255,255,255,0.3)" }}>© 2026 Schweizerische Eidgenossenschaft</span>
+          <span style={{ fontFamily: OB.mono, fontSize: "11px", color: OB.fgMuted }}>© 2026 Schweizerische Eidgenossenschaft</span>
         </div>
       </div>
     </footer>
