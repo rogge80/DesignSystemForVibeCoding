@@ -4,6 +4,8 @@ import {
   Info, AlertTriangle, CheckCircle2, XCircle, Clock, Search, Bell, User,
   Menu, Home, BookOpen, Layers, Settings, ExternalLink
 } from "lucide-react";
+import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
+import logoBverw from "@/imports/logo_bverw.png";
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -257,45 +259,17 @@ function MasterHeader({ activeTab, setActiveTab }: { activeTab: string; setActiv
   const tabs = ["Colors", "Typography", "Components", "Tokens", "Patterns"];
   return (
     <header style={{ background: OB.bgCard, borderBottom: `1px solid ${OB.border}`, position: "sticky", top: 0, zIndex: 100 }}>
-      {/* Service navigation bar */}
-      <div style={{
-        background: OB.fgHigh,
-        padding: "0 24px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        height: "36px",
-      }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-          {/* Swiss cross */}
-          <div style={{ position: "relative", width: "16px", height: "16px", flexShrink: 0 }}>
-            <div style={{ position: "absolute", background: OB.red, width: "16px", height: "6px", top: "5px", left: 0 }} />
-            <div style={{ position: "absolute", background: OB.red, width: "6px", height: "16px", top: 0, left: "5px" }} />
-          </div>
-          <span style={{ fontFamily: OB.font, fontSize: "12px", color: "rgba(255,255,255,0.8)", fontWeight: 400 }}>
-            Schweizerische Eidgenossenschaft
-          </span>
-        </div>
-        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-          {["DE","FR","IT","EN"].map((lang) => (
-            <span key={lang} style={{ fontFamily: OB.font, fontSize: "11px", color: lang === "EN" ? "#ffffff" : "rgba(255,255,255,0.45)", cursor: "pointer", fontWeight: lang === "EN" ? 600 : 400 }}>
-              {lang}
-            </span>
-          ))}
-          <div style={{ width: "1px", height: "14px", background: "rgba(255,255,255,0.2)" }} />
-          <Bell size={13} style={{ color: "rgba(255,255,255,0.55)", cursor: "pointer" }} />
-          <User size={13} style={{ color: "rgba(255,255,255,0.55)", cursor: "pointer" }} />
-        </div>
-      </div>
-
-      {/* Main header */}
-      <div style={{ padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: "56px" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "32px", height: "32px", background: OB.blue, borderRadius: OB.radius }}>
-            <Terminal size={15} style={{ color: "#fff" }} />
-          </div>
+      {/* Main header with official federal logo */}
+      <div style={{ padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: "64px" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+          <ImageWithFallback
+            src={logoBverw}
+            alt="Schweizerische Eidgenossenschaft – Confédération suisse – Confederazione Svizzera – Confederaziun svizra"
+            style={{ height: "40px", width: "auto", objectFit: "contain" }}
+          />
+          <div style={{ width: "1px", height: "32px", background: OB.borderSub }} />
           <div>
-            <p style={{ fontFamily: OB.font, fontSize: "15px", fontWeight: 700, color: OB.fgHigh, lineHeight: 1.2, margin: 0 }}>
+            <p style={{ fontFamily: OB.font, fontSize: "14px", fontWeight: 700, color: OB.fgHigh, lineHeight: 1.2, margin: 0 }}>
               Vibe Coding with Claude
             </p>
             <p style={{ fontFamily: OB.mono, fontSize: "10px", color: OB.fgMuted, margin: 0 }}>Design System · oblique</p>
