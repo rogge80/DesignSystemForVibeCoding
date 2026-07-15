@@ -260,12 +260,12 @@ function MasterHeader({ activeTab, setActiveTab }: { activeTab: string; setActiv
   return (
     <header style={{ background: OB.bgCard, borderBottom: `1px solid ${OB.border}`, position: "sticky", top: 0, zIndex: 100 }}>
       {/* Main header with official federal logo */}
-      <div style={{ padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: "64px" }}>
+      <div style={{ padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: "80px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
           <ImageWithFallback
             src={logoBverw}
             alt="Schweizerische Eidgenossenschaft – Confédération suisse – Confederazione Svizzera – Confederaziun svizra"
-            style={{ height: "40px", width: "auto", objectFit: "contain" }}
+            style={{ height: "56px", minWidth: "254px", width: "auto", objectFit: "contain" }}
           />
           <div style={{ width: "1px", height: "32px", background: OB.borderSub }} />
           <div>
