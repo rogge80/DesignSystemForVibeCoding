@@ -265,7 +265,7 @@ function MasterHeader({ activeTab, setActiveTab }: { activeTab: string; setActiv
           <ImageWithFallback
             src={logoBverw}
             alt="Schweizerische Eidgenossenschaft – Confédération suisse – Confederazione Svizzera – Confederaziun svizra"
-            style={{ height: "56px", minWidth: "254px", width: "auto", objectFit: "contain" }}
+            style={{ height: "56px", width: "264px", objectFit: "contain" }}
           />
           <div style={{ width: "1px", height: "32px", background: OB.borderSub }} />
           <div>
