@@ -260,7 +260,7 @@ function MasterHeader({ activeTab, setActiveTab }: { activeTab: string; setActiv
   return (
     <header style={{ background: OB.bgCard, borderBottom: `1px solid ${OB.border}`, position: "sticky", top: 0, zIndex: 100 }}>
       {/* Main header with official federal logo */}
-      <div style={{ padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: "80px" }}>
+      <div style={{ padding: "15px 24px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
           <ImageWithFallback
             src={logoBverw}
